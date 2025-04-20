@@ -5,7 +5,7 @@ A minty green Neovim colorscheme that is easy on the eyes.
 Inspired by the [Monkeytype](https://monkeytype.com) theme of the same name,
 and [ribru17's Bamboo](https://github.com/ribru17/bamboo.nvim) theme.
 
-![screenshot](assets/screenshot.jpg)
+![screenshot](assets/screenshot.png)
 
 ## Features
 
