@@ -58,7 +58,7 @@ return {
     TabLineFill = { fg = p.dark_gray, bg = p.dark },
     TabLineSel = { fg = p.dark, bg = p.fg },
     Terminal = { fg = p.fg, bg = p.bg },
-    Title = { fg = p.mint, bold = true },
+    Title = { fg = p.bright_mint, bold = true },
     ToolbarButton = { fg = p.dark, bg = p.blue },
     ToolbarLine = { fg = p.fg },
     VertSplit = { fg = p.dark },
