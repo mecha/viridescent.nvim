@@ -35,9 +35,37 @@ Use you favourite package manager, such as [Lazy](https://github.com/folke/lazy.
 ```lua
 {
     'mecha/viridescent.nvim',
-    lazy = false,
-    config = function()
-      require('viridescent').setup()
-    end,
 }
 ```
+
+Then activate it as you would any other colorscheme:
+
+```lua
+vim.cmd("colorscheme viridescent")
+```
+
+```vim
+colorscheme viridescent
+```
+
+## Configuration
+
+Configuration options may optionally be passed to `setup()`.
+
+```lua
+require("viridescent").setup({
+    overrides = {},
+})
+```
+
+The default value will be used for any omitted option. No option is required.
+
+> [!IMPORTANT]
+> Make sure to call `setup()` **BEFORE** applying the colorscheme!
+
+## Acknowledgements
+
+- [ashharrrrr](https://github.com/ashharrrrr) who [contributed](https://github.com/monkeytypegame/monkeytype/pull/3521)
+the original viridescent theme to [Monkeytype](https://monkeytype.com).
+- [ribru17/bamboo](https://github.com/ribru17/bamboo.nvim) for being close-enough
+with syntax colors that I liked.
