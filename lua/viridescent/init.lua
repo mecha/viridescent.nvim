@@ -1,8 +1,11 @@
 local highlights = require("viridescent.highlights")
+local config = require("viridescent.config")
 
 local M = {}
 
-function M.setup(_)
+M.setup = config.setup
+
+function M.apply()
     vim.cmd("highlight clear")
     if vim.fn.exists("syntax_on") then
         vim.cmd("syntax reset")
@@ -11,8 +14,9 @@ function M.setup(_)
     vim.o.termguicolors = true
     vim.g.colors_name = "viridescent"
 
-    for group, opts in pairs(highlights) do
-        vim.api.nvim_set_hl(0, group, opts)
+    for group, hl in pairs(highlights) do
+        hl = config.options.overrides[group] or hl
+        vim.api.nvim_set_hl(0, group, hl)
     end
 end
 
